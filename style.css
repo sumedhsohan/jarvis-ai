@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe1;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 3em;
+  color: #00ffe1;
+  text-shadow: 0 0 12px #00ffe1, 0 0 20px #00ffee55;
+  letter-spacing: 1.5px;
+}
+
+.glow {
+  width: 140px;
+  height: 140px;
+  margin: 30px auto;
+  background: radial-gradient(circle, #00ffe1 30%, #004d4d 70%);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite alternate;
+  box-shadow: 0 0 50px #00ffe1;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 25px #00ffe1;
+  }
+  to {
+    transform: scale(1.1);
+    box-shadow: 0 0 70px #00ffe1;
+  }
+}
+
+#output {
+  background: rgba(0, 255, 225, 0.05);
+  border: 1px solid #00ffe155;
+  border-radius: 20px;
+  padding: 25px;
+  width: 80%;
+  max-height: 55vh;
+  overflow-y: auto;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 25px #00ffe1aa;
+  text-align: left;
+  backdrop-filter: blur(10px);
+}
+
+.message {
+  display: inline-block;
+  padding: 16px 22px;
+  margin: 12px;
+  border-radius: 25px;
+  max-width: 75%;
+  word-break: break-word;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user {
+  background: linear-gradient(to right, #0077ff, #0033cc);
+  color: #fff;
+  float: right;
+  clear: both;
+  text-align: right;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.6);
+}
+
+.ai {
+  background: linear-gradient(to right, #002922, #005555);
+  color: #00ffe1;
+  float: left;
+  clear: both;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 255, 225, 0.5);
+}
+
+#output::-webkit-scrollbar {
+  width: 8px;
+}
+#output::-webkit-scrollbar-thumb {
+  background: #00ffe1aa;
+  border-radius: 5px;
+}
+
+button {
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00ffe1, #00cccc);
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 18px #00ffe1;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #00cccc, #00ffe1);
+  transform: scale(1.07);
+  box-shadow: 0 0 30px #00ffe1;
+}
+
+#inputArea {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#textInput {
+  width: 60%;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #00ffe1;
+  background-color: #000;
+  color: #00ffe1;
+  outline: none;
+  box-shadow: 0 0 12px #00ffe1;
+}
+
+#textInput::placeholder {
+  color: #00ffe1aa;
+}
+
+#uploadArea {
+  margin-top: 10px;
+  color: #00ffe1;
+  font-weight: bold;
+}
+
+#fileInput {
+  margin-left: 10px;
+  background: #000;
+  color: #00ffe1;
+  border: 1px solid #00ffe1;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 0 12px #00ffe1;
+}
+
+/* Jarvis Avatar (optional) */
+.avatar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('https://i.ibb.co/JvpF07T/jarvis-avatar.png');
+  background-size: cover;
+  box-shadow: 0 0 20px #00ffe1;
+  border: 2px solid #00ffe1;
+}
