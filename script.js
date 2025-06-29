@@ -1,5 +1,5 @@
 const userName = "Sumedh";
-const mistralApiKey = "8djhb4FUrn5c4mh7NYY27be9WpAoKrIU"; // Replace with your real API key
+const mistralApiKey = "trnQ0hsE0i8KTxAjOeddffHYKIXKH9FH"; // Replace with your real API key
 
 function getCurrentDateTime() {
   const now = new Date();
